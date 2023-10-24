@@ -19,6 +19,7 @@ class CreateColaboradoresTable extends Migration
             $table->string('nome');
             $table->string('cpf');
             $table->string('email');
+            $table->timestamps();
 
             $table->foreign('unidade_id')->references('id')->on('unidades');
         });

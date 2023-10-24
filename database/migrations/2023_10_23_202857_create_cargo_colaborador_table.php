@@ -18,6 +18,7 @@ class CreateCargoColaboradorTable extends Migration
             $table->unsignedBigInteger('cargo_id');
             $table->unsignedBigInteger('colaborador_id');
             $table->integer('nota_desempenho');
+            $table->timestamps();
 
             $table->foreign('cargo_id')->references('id')->on('cargos');
             $table->foreign('colaborador_id')->references('id')->on('colaboradores');
